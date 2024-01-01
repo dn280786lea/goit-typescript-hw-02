@@ -1,24 +1,18 @@
 /*
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
-type pageOne = {
+type Page = {
   title: string;
   likes: number;
   accounts: string[];
   status: string;
-  details: {
+  details?: {
     createAt: Date;
-    updateAt?: Date;
+    updateAt: Date;
   };
 };
-type pageTwo = {
-  title: string;
-  likes: number;
-  accounts: string[];
-  status: string;
-};
 
-const page1: pageOne = {
+const page1: Page = {
   title: "The awesome page",
   likes: 100,
   accounts: ["Max", "Anton", "Nikita"],
@@ -29,11 +23,11 @@ const page1: pageOne = {
   },
 };
 
-const page2: pageTwo = {
+const page2: Page = {
   title: "Python or Js",
   likes: 5,
   accounts: ["Alex"],
   status: "close",
 };
 
-export {};
+export { page1, page2 };
